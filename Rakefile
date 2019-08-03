@@ -17,7 +17,6 @@ end
 namespace :db do
  desc 'migrate changes to your database'
   task :migrate => :environment do
-  #require_relative './config/environment'
   Student.create_table
 end
  
@@ -28,7 +27,7 @@ end
 end
 
 desc 'drop into Pry console'
-task :console => :environment do
-  Pry.start
+  task :console => :environment do
+    Pry.start
 end
    
